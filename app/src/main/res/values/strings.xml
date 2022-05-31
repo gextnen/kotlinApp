@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CourseWork</string>
+    <string name="no_account">Нету аккаунта? Зарегистрироваться</string>
 </resources>
