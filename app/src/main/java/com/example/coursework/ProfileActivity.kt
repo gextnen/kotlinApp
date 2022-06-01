@@ -17,11 +17,14 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityProfileBinding.inflate(layoutInflater)
+        supportActionBar?.hide()
+
         setContentView(binding.root)
 
-        actionBar = supportActionBar!!
-        actionBar.title = "Профиль"
+//        actionBar = supportActionBar!!
+//        actionBar.title = "Профиль"
 
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
@@ -29,6 +32,11 @@ class ProfileActivity : AppCompatActivity() {
         binding.logoutBtn.setOnClickListener{
             firebaseAuth.signOut()
             checkUser()
+        }
+
+        binding.addEventBtn.setOnClickListener{
+            startActivity(Intent(this, EventAddActivity::class.java))
+
         }
     }
 

@@ -1,31 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="20dp"
+    android:background="@drawable/back01"
     tools:context=".ProfileActivity">
 
+    <!--    Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02" >
+
     <TextView
+        android:id="@+id/titleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вы зашли как"
-        style="@style/TextAppearance.MaterialComponents.Caption"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Лучшее приложение мир[э]а"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/emailTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
-        style="@style/TextAppearance.MaterialComponents.Body1" />
-    <Button
+        android:layout_below="@+id/titleTv"
+        android:layout_centerHorizontal="true"
+        android:text="abc@abc.com"
+        android:textColor="@color/white" />
+
+    <ImageButton
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Выход"
-        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_logout_white"
+
         />
-</LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        >
+    <Button
+        android:id="@+id/addEventBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shape_button01"
+        android:minHeight="50dp"
+        android:text="Добавить событие"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            app:fabCustomSize="50dp"
+            app:tint="@color/white"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
