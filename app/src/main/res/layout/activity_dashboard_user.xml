@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back01"
-    tools:context=".AdminActivity">
+    tools:context=".DashboardUserActivity">
+
     <RelativeLayout
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
@@ -40,8 +40,7 @@
             android:layout_alignParentRight="true"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_logout_white"
+
             />
     </RelativeLayout>
-    
-
 </RelativeLayout>

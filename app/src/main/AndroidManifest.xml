@@ -13,6 +13,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CourseWork">
         <activity
+            android:name=".FilterEvent"
+            android:exported="true" />
+        <activity
+            android:name=".DashboardUserActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dashboard_user"
+            android:theme="@style/Theme.CourseWork.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".EventAddActivity"
             android:exported="true" />
         <activity
@@ -26,13 +43,7 @@
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
