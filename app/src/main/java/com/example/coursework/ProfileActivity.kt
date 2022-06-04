@@ -58,6 +58,10 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.addEventBtn.setOnClickListener{
             startActivity(Intent(this, EventAddActivity::class.java))
+        }
+
+        binding.addImageBtn.setOnClickListener{
+            startActivity(Intent(this, ImgAddActivity::class.java))
 
         }
     }

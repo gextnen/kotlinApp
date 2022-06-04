@@ -44,7 +44,7 @@ class AdapterEvent :RecyclerView.Adapter<AdapterEvent.HolderCategory>, Filterabl
         holder.deleteBtn.setOnClickListener {
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete")
-                .setMessage("Вы действительно хотите удалить событие?")
+                .setMessage("Вы действительно хотите удалить стадион?")
                 .setPositiveButton("Да"){a, d->
                     Toast.makeText(context, "Удаление...", Toast.LENGTH_SHORT).show()
                     deleteEvent(model, holder)

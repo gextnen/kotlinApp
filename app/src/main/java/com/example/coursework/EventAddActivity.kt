@@ -44,7 +44,7 @@ class EventAddActivity : AppCompatActivity() {
     private fun validateData() {
         event = binding.eventEt.text.toString().trim()
         if (event.isEmpty()) {
-            Toast.makeText(this, "Введите событие!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Введите стадион!", Toast.LENGTH_SHORT).show()
         } else {
             addEventFirebase()
         }
