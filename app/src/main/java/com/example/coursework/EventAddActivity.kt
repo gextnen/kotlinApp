@@ -23,6 +23,8 @@ class EventAddActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEventAddBinding.inflate(layoutInflater)
+        supportActionBar?.hide()
+
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()

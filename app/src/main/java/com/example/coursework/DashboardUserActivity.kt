@@ -17,6 +17,7 @@ class DashboardUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()

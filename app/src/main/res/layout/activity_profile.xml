@@ -96,6 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_500"
+            android:src="@drawable/ic_pdf_add_white"
             app:fabCustomSize="50dp"
             app:tint="@color/white"
             />

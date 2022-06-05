@@ -35,6 +35,8 @@ class ImgAddActivity : AppCompatActivity() {
     private val TAG = "PDF_ADD_TAG"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
+
         binding = ActivityImgAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -195,7 +197,7 @@ class ImgAddActivity : AppCompatActivity() {
             .setItems(eventsArray){dialog, which-> 
                 //get clicked item
                 selectedEventTitle = eventArrayList[which].event
-                selectedEventTitle = eventArrayList[which].id
+                selectedEventId = eventArrayList[which].id
                 
                 binding.eventTv.text = selectedEventTitle
 
